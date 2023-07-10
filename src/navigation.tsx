@@ -1,12 +1,12 @@
 import React from 'react';
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
-import {ScreenA, ScreenB} from './screens';
+import {LoadingScreen, ScreenA, ScreenB} from './screens';
 
 export type StackParams = {
   ScreenA: undefined;
   LoadingScreen: undefined;
-  screenB: undefined;
+  ScreenB: undefined;
 };
 
 const Stack = createNativeStackNavigator<StackParams>();
@@ -16,7 +16,12 @@ export const Navigation: React.FC = () => {
     <NavigationContainer>
       <Stack.Navigator>
         <Stack.Screen name="ScreenA" component={ScreenA} />
-        <Stack.Screen name="screenB" component={ScreenB} />
+        <Stack.Screen
+          name="LoadingScreen"
+          component={LoadingScreen}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen name="ScreenB" component={ScreenB} />
       </Stack.Navigator>
     </NavigationContainer>
   );

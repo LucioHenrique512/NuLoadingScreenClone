@@ -11,7 +11,10 @@ export const ScreenA: React.FC = () => {
 
   return (
     <SafeAreaView>
-      <Button onPress={() => navigate('screenB')} title="Navegar para tela B" />
+      <Button
+        onPress={() => navigate('LoadingScreen')}
+        title="Navegar para Loading"
+      />
     </SafeAreaView>
   );
 };
