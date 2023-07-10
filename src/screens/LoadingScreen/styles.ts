@@ -9,22 +9,3 @@ export const Container = styled.View`
 `;
 
 export const AnimationContainer = styled.View``;
-
-const textContainerHeight = RFPercentage(9);
-
-export const TextContainer = styled.View`
-  background: yellow;
-  justify-content: flex-end;
-  height: ${textContainerHeight}px;
-`;
-
-export const Text = styled.Text`
-  font-size: ${RFPercentage(3.5)}px;
-  font-weight: 500;
-  color: #181818;
-`;
-
-export const TextScroller = styled.FlatList`
-  margin-bottom: ${RFPercentage(4)}px;
-  height: ${textContainerHeight}px;
-`;

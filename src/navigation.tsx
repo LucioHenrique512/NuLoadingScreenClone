@@ -5,7 +5,7 @@ import {LoadingScreen, ScreenA, ScreenB} from './screens';
 
 export type StackParams = {
   ScreenA: undefined;
-  LoadingScreen: undefined;
+  LoadingScreen: {navigateOnFinish: keyof StackParams};
   ScreenB: undefined;
 };
 
